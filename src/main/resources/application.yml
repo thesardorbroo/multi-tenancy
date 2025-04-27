@@ -1,0 +1,30 @@
+
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/multi_tenancy
+    username: root
+    password: root
+    driver-class-name: org.postgresql.Driver
+  application:
+    name: multitenancy
+
+tenant:
+  datasource:
+    -
+      id: 1
+      url: jdbc:postgresql://localhost:5432/st_tenant
+      username: root
+      password: root
+      driver: org.postgresql.Driver
+
+    -
+      id: 2
+      url: jdbc:postgresql://localhost:5432/nd_tenant
+      username: root
+      password: root
+      driver: org.postgresql.Driver
+
+logging:
+  level:
+    org.springframework.aop: DEBUG
