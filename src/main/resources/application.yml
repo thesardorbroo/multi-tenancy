@@ -1,13 +1,11 @@
-
-
 spring:
+  application:
+    name: multitenancy
   datasource:
     url: jdbc:postgresql://localhost:5432/multi_tenancy
     username: root
     password: root
     driver-class-name: org.postgresql.Driver
-  application:
-    name: multitenancy
 
 tenant:
   datasource:

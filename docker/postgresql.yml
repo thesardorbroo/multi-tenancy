@@ -4,6 +4,7 @@ name: multi-tenancy
 
 services:
   postgresql:
+    container_name: multi-tenancy-db
     image: postgres:16.4
     # volumes:
     #   - ~/volumes/jhipster/locationMs/postgresql/:/var/lib/postgresql/data/
