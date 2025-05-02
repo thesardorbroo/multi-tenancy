@@ -45,19 +45,23 @@ This project allows tenant-specific data handling based on dynamic DataSources, 
    ```bash
    docker compose -f ./docker/postgresql.yml up -d
    ```
+   
    > [!IMPORTANT]
    > Enter inside postgresql container and execute postgresql commands and initialize databases and default data. 
    > SQL queries is located in [init-db.sql](/src/main/resources/sql/init-db.sql) file.
 
    > [!NOTE]
    > Entering inside postgresql container:
+   > 
    > ```bash
    > docker exec -it multi-tenancy-db /bin/sh
    > ```
+   > 
    > Entering inside postgresql database
    > ```bash
    > psql multi-tenancy -U root
    > ```
+   > 
    > Use `\c <database name>` for connecting another database inside same postgresql container
 
 3. Run application:
